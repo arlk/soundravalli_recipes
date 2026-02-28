@@ -189,5 +189,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initial render
         scaleIngredients(defaultServings || 1);
+
+        // --- Cusdis Integration ---
+        const cusdisThread = document.getElementById('cusdis_thread');
+        if (cusdisThread) {
+            const pageId = fileName; // Use filename as unique ID
+            const pageUrl = window.location.href;
+            const pageTitle = recipe.title_en;
+
+            cusdisThread.setAttribute('data-page-id', pageId);
+            cusdisThread.setAttribute('data-page-url', pageUrl);
+            cusdisThread.setAttribute('data-page-title', pageTitle);
+
+            // If Cusdis is already loaded (e.g. back navigation), re-render it
+            if (window.CUSDIS) {
+                window.CUSDIS.renderWidget(cusdisThread);
+            }
+        }
     }
 });

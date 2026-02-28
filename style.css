@@ -236,6 +236,17 @@ header p {
     background-color: #f9f9f9;
 }
 
+.comments-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+}
+
+.comments-section h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
 footer {
     text-align: left;
     padding: 40px 0;
