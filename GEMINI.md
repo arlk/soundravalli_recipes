@@ -10,6 +10,7 @@
 - **Recipe Unification:** Group variations of the same base recipe (like Sambar or Rasam powders) into a single recipe entry using subheadings (e.g., `### Variation 1`).
 - **Methods:** Always render recipe methods as numbered lists.
 - **Tamil Support:** Always include the Tamil translation for recipe titles where available.
+- **Portion Adjustments:** Recipes should include a `default_servings` value. Set to `0` for recipes like powders or pickles where a serving calculator is inappropriate.
 
 ## Technical Architecture
 - **Static First:** This is a pure static site. Do not introduce build steps (Webpack, Vite, etc.) or external backend dependencies.
