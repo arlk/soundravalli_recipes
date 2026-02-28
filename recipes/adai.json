@@ -6,23 +6,25 @@
   "ingredients": [
     "Parboiled Rice - 1/4 cup",
     "Raw Rice - 1/4 cup",
-    "Toor Dal - 1/8 cup",
-    "Chana Dal - 1/8 cup",
-    "Dry Red Chilies - 15",
-    "Asafoetida - to taste",
+    "Toor Dal - 1/4 cup",
+    "Chana Dal - 1/4 cup",
+    "Dry Red Chilies - 4",
+    "Asafoetida - 1 pinch",
     "Salt - to taste",
     "Chopped Onion - 1/4 cup",
-    "Coconut - 1 half, chopped into small pieces",
+    "Coconut - 1/2 coconut, chopped into small pieces",
     "Curry Leaves - 1 sprig"
   ],
   "method": [
     "Grind the parboiled rice, raw rice, toor dal, chana dal, dry red chilies, asafoetida, and salt together coarsely.",
     "Add the chopped onion, chopped coconut pieces, and pinched curry leaves to the batter.",
-    "Mix everything well and dilute the batter with a little water.",
-    "Pour it lightly onto a hot griddle, add plenty of oil around the edges, and cook until it becomes crispy.",
+    "Mix everything well and dilute the batter with a little water until it is easy to pour.",
+    "Pour a ladle of batter onto a hot griddle, spread it slightly, add oil around the edges, and cook until it becomes crispy and golden brown.",
     "Serve hot with chutney or jaggery."
   ],
-  "notes": [],
+  "notes": [
+    "Note: This protein-rich version uses a 1:1 ratio of rice to dal (1/2 cup total rice to 1/2 cup total dal). For the original traditional version, use a 2:1 ratio (1/2 cup total rice to 1/4 cup total dal) and adjust red chilies to 15 if you prefer the traditional level of spice."
+  ],
   "default_servings": 4,
   "original_snippets": [
     "adai.jpg"
