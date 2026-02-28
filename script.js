@@ -179,22 +179,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
             contentDiv.innerHTML = marked.parse(markdown);
 
-            // Add original snippets if available
+            // Add original snippets as thumbnails if available
             if (recipe.original_snippets && recipe.original_snippets.length > 0) {
                 const snippetSection = document.createElement('section');
                 snippetSection.className = 'snippet-section';
                 snippetSection.innerHTML = `
                     <h3 class="markdown-header">Original Handwritten Recipe</h3>
+                    <p style="font-size: 0.85rem; color: #65676b; margin-bottom: 15px;">Click to expand handwritten notes</p>
                     <div class="snippet-grid">
-                        ${recipe.original_snippets.map(s => `
-                            <div class="snippet-container">
-                                <img src="assets/snippets/${s}" alt="Handwritten snippet" class="original-snippet">
+                        ${recipe.original_snippets.map((s, idx) => `
+                            <div class="snippet-container" data-index="${idx}">
+                                <img src="assets/snippets/${s}" alt="Handwritten snippet thumbnail" class="original-snippet">
                             </div>
                         `).join('')}
                     </div>
                 `;
                 contentDiv.appendChild(snippetSection);
+                
+                // Initialize Lightbox
+                initLightbox(recipe.original_snippets);
             }
+        }
+
+        function initLightbox(snippets) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                currentIndex = index;
+                lightboxImg.src = `assets/snippets/${snippets[currentIndex]}`;
+                lightboxCaption.innerText = `Image ${currentIndex + 1} of ${snippets.length}`;
+                
+                // Show/hide nav buttons based on count
+                if (snippets.length <= 1) {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                } else {
+                    prevBtn.style.display = 'flex';
+                    nextBtn.style.display = 'flex';
+                }
+            }
+
+            // Click on thumbnail
+            document.querySelectorAll('.snippet-container').forEach(container => {
+                container.addEventListener('click', () => {
+                    const index = parseInt(container.getAttribute('data-index'));
+                    showImage(index);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+
+            // Close lightbox
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            };
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            // Navigation
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let newIndex = currentIndex - 1;
+                if (newIndex < 0) newIndex = snippets.length - 1;
+                showImage(newIndex);
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let newIndex = currentIndex + 1;
+                if (newIndex >= snippets.length) newIndex = 0;
+                showImage(newIndex);
+            });
+
+            // Keyboard support
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            });
         }
 
         servingsInput.addEventListener('input', () => {
