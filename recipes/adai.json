@@ -4,15 +4,23 @@
   "title_ta": "அடை",
   "category": "Rice and Tiffin",
   "ingredients": [
+    "Parboiled Rice - 0.25 padi",
     "Raw Rice - 0.25 padi",
     "Toor Dal - 0.125 padi",
-    "Onion & Coconut",
-    "Red Chilies - 15"
+    "Chana Dal - 0.125 padi",
+    "Dry Red Chilies - 15",
+    "Asafoetida (Hing) - to taste",
+    "Salt - to taste",
+    "Chopped Onion - 0.25 padi",
+    "Coconut - 1 half, chopped into small pieces",
+    "Curry Leaves - 1 sprig"
   ],
   "method": [
-    "Grind rice, dal, chilies, and salt coarsely.",
-    "Mix with chopped onion, coconut, and curry leaves.",
-    "Cook on griddle with plenty of oil."
+    "Grind the parboiled rice, raw rice, toor dal, chana dal, dry red chilies, asafoetida, and salt together coarsely.",
+    "Add the chopped onion, chopped coconut pieces, and pinched curry leaves to the batter.",
+    "Mix everything well and dilute the batter with a little water.",
+    "Pour it lightly onto a hot griddle, add plenty of oil around the edges, and cook until it becomes crispy.",
+    "Serve hot with chutney or jaggery."
   ],
   "notes": [],
   "default_servings": 4,
