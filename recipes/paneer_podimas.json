@@ -27,5 +27,8 @@
   "notes": [
     "Note: This can also be made with store-bought paneer."
   ],
-  "default_servings": 4
+  "default_servings": 4,
+  "original_snippets": [
+    "paneer_podimas.jpg"
+  ]
 }

@@ -17,5 +17,8 @@
   "notes": [
     "Note: Drinking this before a feast helps with digestion."
   ],
-  "default_servings": 4
+  "default_servings": 4,
+  "original_snippets": [
+    "cold_cucumber_soup.jpg"
+  ]
 }

@@ -7,13 +7,20 @@
     "Assorted Veg",
     "Small Onions, Garlic, Green Chilies",
     "Tamarind",
-    "Grated Coconut"
+    "Boiled Chickpeas (Chundal) - 0.5 kg",
+    "Grated Coconut - 1 handful"
   ],
   "method": [
     "Temper spices and sauté onions, garlic, and chilies.",
     "Add veg and water; cook until tender.",
-    "Add tamarind extract, salt, and coconut; boil once."
+    "Add tamarind extract, salt, and cover to cook for 10 minutes.",
+    "Once vegetables are cooked, add the boiled chickpeas.",
+    "Add a handful of grated coconut and bring to a boil once.",
+    "Serve as a side for Chapathi and Idiyappam."
   ],
   "notes": [],
-  "default_servings": 4
+  "default_servings": 4,
+  "original_snippets": [
+    "vegetable_mandi.jpg"
+  ]
 }

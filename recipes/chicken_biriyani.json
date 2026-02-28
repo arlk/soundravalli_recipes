@@ -30,12 +30,15 @@
     "Add the chopped onions and sauté.",
     "Once browned, add the slit green chilies and sauté.",
     "Then add the tomatoes and sauté.",
-    "Add the marinated chicken and let it cook for a while.",
+    "Add the marinated chicken and let it cook until 3/4th done.",
     "Then add the soaked rice and stir gently with a ladle.",
     "Pour in double the amount of water and close with a lid.",
     "Once the rice is cooked and the biriyani is ready, add mint and coriander leaves.",
-    "Stir well and serve."
+    "Stir well and serve hot."
   ],
   "notes": [],
-  "default_servings": 6
+  "default_servings": 6,
+  "original_snippets": [
+    "chicken_biriyani.jpg"
+  ]
 }

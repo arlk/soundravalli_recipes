@@ -20,5 +20,8 @@
   "notes": [
     "Note: Serving this with potato chips will increase the taste further."
   ],
-  "default_servings": 4
+  "default_servings": 4,
+  "original_snippets": [
+    "fried_mushroom.jpg"
+  ]
 }

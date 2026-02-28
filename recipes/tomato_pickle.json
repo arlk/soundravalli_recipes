@@ -19,5 +19,8 @@
   "notes": [
     "Note: Don't forget to add chili powder and salt powder."
   ],
-  "default_servings": 0
+  "default_servings": 0,
+  "original_snippets": [
+    "tomato_pickle.jpg"
+  ]
 }

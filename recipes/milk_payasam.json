@@ -24,5 +24,8 @@
   "notes": [
     "Note: This makes approximately 5 tumblers of payasam."
   ],
-  "default_servings": 5
+  "default_servings": 5,
+  "original_snippets": [
+    "milk_payasam.jpg"
+  ]
 }

@@ -18,5 +18,8 @@
     "Serve puris filled with green gram, chutney, and pani."
   ],
   "notes": [],
-  "default_servings": 4
+  "default_servings": 4,
+  "original_snippets": [
+    "pani_puri.jpg"
+  ]
 }
