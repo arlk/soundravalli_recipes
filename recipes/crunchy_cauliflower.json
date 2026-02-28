@@ -1,18 +1,28 @@
 {
   "id": "29",
-  "title_en": "Crunchy Cauliflower",
-  "title_ta": "Gobi 65",
+  "title_en": "Gobi 65",
+  "title_ta": "மொறு மொறு காலிபிளவர்",
   "category": "Snacks and Appetizers",
   "ingredients": [
-    "Cauliflower - 1 large",
+    "Cauliflower - 1",
+    "Oil - 500g",
     "Egg - 3",
-    "Rice Flour - 50g",
-    "Ginger-Garlic Paste",
-    "Chili Powder & Spices"
+    "Ginger-Garlic Paste - 50g",
+    "Chili Powder - 5 tsp",
+    "Coriander Powder - 5g",
+    "Cumin Powder - 1 tsp",
+    "Salt - to taste",
+    "Color Powder - 1 tsp",
+    "Rice Flour - 50g"
   ],
   "method": [
-    "Beat eggs and mix with spices, flour, and cauliflower.",
-    "Deep fry in small portions."
+    "Break the eggs into a vessel and beat them well.",
+    "Add ginger-garlic paste, coriander powder, chili powder, salt, color powder, rice flour, and cumin powder to the beaten eggs. Mix well.",
+    "Add the chopped cauliflower to this mixture and coat them thoroughly.",
+    "Heat oil in a pan. Once hot, drop the cauliflower pieces in small batches and fry them until done.",
+    "**Cumin Powder:** Roast cumin seeds and grind them in a mixer to prepare fresh powder.",
+    "**Coriander Powder:** Roast coriander seeds and grind them in a mixer.",
+    "**Ginger-Garlic Paste:** Grind equal amounts of ginger and garlic with a little water in a mixer."
   ],
   "notes": [],
   "default_servings": 4,
