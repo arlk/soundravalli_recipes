@@ -36,14 +36,14 @@
   },
   {
     "id": "sambar_powder",
-    "title_en": "Sambar Powder (3 Variations)",
+    "title_en": "Sambar Powder",
     "title_ta": "சாம்பார்பொடி",
     "category": "Powders and Masalas",
     "file": "sambar_powder_3_variations.json"
   },
   {
     "id": "rasam_powder",
-    "title_en": "Rasam Powder (2 Variations)",
+    "title_en": "Rasam Powder",
     "title_ta": "ரசப்பொடி",
     "category": "Powders and Masalas",
     "file": "rasam_powder_2_variations.json"
