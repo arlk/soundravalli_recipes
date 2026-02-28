@@ -1,0 +1,20 @@
+{
+  "id": "19",
+  "title_en": "Lemon Pickle",
+  "title_ta": "எலுமிச்சம்பழ ஊறுகாய்",
+  "category": "Pickles",
+  "ingredients": [
+    "Lemons - 100",
+    "Rock Salt - 0.25 padi",
+    "Red Chili Powder - 0.5 padi",
+    "Fenugreek & Hing",
+    "Gingelly Oil"
+  ],
+  "method": [
+    "Soak cut lemons in salt for a month.",
+    "Add roasted fenugreek, hing, and chili powder.",
+    "Temper with mustard in gingelly oil."
+  ],
+  "notes": [],
+  "default_servings": 0
+}

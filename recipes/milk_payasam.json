@@ -1,0 +1,28 @@
+{
+  "id": "4",
+  "title_en": "Milk Payasam",
+  "title_ta": "பால் பாயாசம்",
+  "category": "Sweets and Desserts",
+  "ingredients": [
+    "Basmati rice - 200g",
+    "Ghee",
+    "Milk - 8 tumblers",
+    "Sugar - 2 tumblers",
+    "Cashew nuts - 100g",
+    "Saffron - 0.5g",
+    "Cardamom powder",
+    "Pistachios"
+  ],
+  "method": [
+    "Roast rice in ghee until golden brown on low flame.",
+    "Wash roasted rice and cook in 3/4 tumbler water until soft.",
+    "Add milk 2 tumblers at a time, stirring until reduced.",
+    "Continue until all 8 tumblers of milk are used and reduced to about 5 tumblers.",
+    "Add sugar and powdered cashew nuts; cook for 5 minutes.",
+    "Garnish with chopped pistachios, roasted cashews, saffron, and cardamom powder."
+  ],
+  "notes": [
+    "Note: This makes approximately 5 tumblers of payasam."
+  ],
+  "default_servings": 5
+}

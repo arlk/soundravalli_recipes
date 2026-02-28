@@ -1,0 +1,19 @@
+{
+  "id": "27",
+  "title_en": "Vegetable Mandi",
+  "title_ta": "காய்கறி மண்டி",
+  "category": "Main Dishes and Curries",
+  "ingredients": [
+    "Assorted Veg",
+    "Small Onions, Garlic, Green Chilies",
+    "Tamarind",
+    "Grated Coconut"
+  ],
+  "method": [
+    "Temper spices and sauté onions, garlic, and chilies.",
+    "Add veg and water; cook until tender.",
+    "Add tamarind extract, salt, and coconut; boil once."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

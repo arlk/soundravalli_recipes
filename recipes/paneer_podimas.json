@@ -1,0 +1,31 @@
+{
+  "id": "11",
+  "title_en": "Paneer Podimas",
+  "title_ta": "பனீர் பொடிமாஸ்",
+  "category": "Main Dishes and Curries",
+  "ingredients": [
+    "Milk - 2 Liters",
+    "Vinegar - 5 tsp",
+    "Onion - 3",
+    "Tomato - 3",
+    "Ginger - 5g",
+    "Green Chili - 5",
+    "Coriander - 0.25 bundles",
+    "Turmeric Powder - 0.25 tsp",
+    "Garam Masala - 0.25 tsp",
+    "Curry Leaves",
+    "Cumin - 1 tsp",
+    "Salt"
+  ],
+  "method": [
+    "Boil milk and add vinegar to curdle; strain through cloth to get paneer.",
+    "Sauté cumin and chopped onions in oil until golden.",
+    "Add turmeric, salt, garam masala, and crushed green chilies.",
+    "Crumble paneer and add to pan.",
+    "Add chopped tomatoes and ginger strips; sauté well and garnish with coriander."
+  ],
+  "notes": [
+    "Note: This can also be made with store-bought paneer."
+  ],
+  "default_servings": 4
+}

@@ -1,0 +1,19 @@
+{
+  "id": "22",
+  "title_en": "Adai",
+  "title_ta": "அடை",
+  "category": "Rice and Tiffin",
+  "ingredients": [
+    "Raw Rice - 0.25 padi",
+    "Toor Dal - 0.125 padi",
+    "Onion & Coconut",
+    "Red Chilies - 15"
+  ],
+  "method": [
+    "Grind rice, dal, chilies, and salt coarsely.",
+    "Mix with chopped onion, coconut, and curry leaves.",
+    "Cook on griddle with plenty of oil."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

@@ -1,0 +1,23 @@
+{
+  "id": "20",
+  "title_en": "Tomato Pickle",
+  "title_ta": "தக்காளி ஊறுகாய்",
+  "category": "Pickles",
+  "ingredients": [
+    "Tomato - 1 kg",
+    "Tamarind - 0.25 kg",
+    "Garlic - 100g",
+    "Gingelly Oil - 200g",
+    "Red Chili Powder - 0.125 padi",
+    "Salt - 0.125 padi"
+  ],
+  "method": [
+    "Sauté tomatoes and tamarind; grind once cooled.",
+    "Temper mustard, curry leaves, and garlic in oil.",
+    "Add tomato paste and sauté well."
+  ],
+  "notes": [
+    "Note: Don't forget to add chili powder and salt powder."
+  ],
+  "default_servings": 0
+}

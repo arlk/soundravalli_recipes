@@ -1,0 +1,19 @@
+{
+  "id": "18",
+  "title_en": "Appam",
+  "title_ta": "ஆப்பம்",
+  "category": "Rice and Tiffin",
+  "ingredients": [
+    "Parboiled & Raw Rice - 1 tumbler each",
+    "Sago - 7 tbsp",
+    "Baking soda",
+    "Salt"
+  ],
+  "method": [
+    "Soak and grind rice finely.",
+    "Mix with sago and salt.",
+    "Add baking soda in the morning and prepare appams."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

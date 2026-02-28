@@ -1,0 +1,17 @@
+{
+  "id": "10",
+  "title_en": "Garam Masala",
+  "title_ta": "கரம் மசாலா",
+  "category": "Powders and Masalas",
+  "ingredients": [
+    "Cinnamon - 25g",
+    "Black Cardamom - 25g",
+    "Whole Black Pepper - 25g",
+    "Cloves - 15g"
+  ],
+  "method": [
+    "Lightly roast and grind in a mixer."
+  ],
+  "notes": [],
+  "default_servings": 0
+}

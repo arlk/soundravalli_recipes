@@ -1,0 +1,30 @@
+{
+  "id": "5",
+  "title_en": "Bitter Gourd Roast",
+  "title_ta": "பாகற்காய் ரோஸ்ட்",
+  "category": "Snacks and Appetizers",
+  "ingredients": [
+    "Small bitter gourds - 200g",
+    "Tamarind - 30g",
+    "Turmeric powder - 1 spoon",
+    "Salt - 2 spoons",
+    "Gram flour - 6 spoons",
+    "Chili powder - 3 spoons",
+    "Table salt - 1.5 spoons",
+    "Curry leaves",
+    "Hing",
+    "Oil for frying"
+  ],
+  "method": [
+    "Slit bitter gourds lengthwise.",
+    "Boil in tamarind water with turmeric and salt until cooked, then drain.",
+    "Divide into 3 batches.",
+    "For each part, mix 2 spoons of gram flour, 1 spoon of chili powder, 1/2 spoon of table salt, a little curry leaves, and a little hing.",
+    "Mix them without mashing the bitter gourd.",
+    "This will be like a light powder coating on the vegetable.",
+    "Fry each part in boiling oil like you fry pakodas.",
+    "The bitter gourd roast will be very crunchy. It won't be bitter."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

@@ -1,0 +1,21 @@
+{
+  "id": "17",
+  "title_en": "Poli",
+  "title_ta": "போளி",
+  "category": "Sweets and Desserts",
+  "ingredients": [
+    "Maida & Wheat Flour",
+    "Chana Dal - 2 cups",
+    "Jaggery - 2 cups",
+    "Coconut - 1",
+    "Ghee"
+  ],
+  "method": [
+    "Knead soft dough with flours, oil, and kesari powder; soak for 1 hour.",
+    "For Filling: Roast and soak chana dal; grind with coconut and cardamom.",
+    "Cook with jaggery and ghee until thick.",
+    "Stuff filling into dough and cook like flatbreads."
+  ],
+  "notes": [],
+  "default_servings": 0
+}

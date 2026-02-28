@@ -1,0 +1,22 @@
+{
+  "id": "26",
+  "title_en": "Gobi Manchurian",
+  "title_ta": "கோபி மஞ்சூரியன்",
+  "category": "Main Dishes and Curries",
+  "ingredients": [
+    "Cauliflower - 400g",
+    "Carrot - 200g",
+    "Almonds - 100g",
+    "Capsicum & Onion",
+    "Soy Sauce - 2 tbsp",
+    "Vinegar - 1 tbsp",
+    "Salt/MSG - 1 tsp"
+  ],
+  "method": [
+    "Sauté veg and ginger-garlic paste.",
+    "Add cornflour-soy sauce slurry and boil until thick.",
+    "Add roasted almonds."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

@@ -1,0 +1,20 @@
+{
+  "id": "sambar_powder",
+  "title_en": "Sambar Powder (3 Variations)",
+  "title_ta": "சாம்பார்பொடி",
+  "category": "Powders and Masalas",
+  "ingredients": [],
+  "method": [
+    "### Variation 1 (Batch 1)",
+    "**Ingredients:** Toor Dal (0.5 kg), Chana Dal (0.5 kg), Dhaniya (0.75 kg), Dry Red Chilies (0.25 kg), Fenugreek (25g), Hing (50g).",
+    "**Method:** Fry solid hing in oil and set aside. Roast fenugreek until golden brown, then chana dal, then toor dal, then red chilies, then dhaniya (maintain this order). Add fried hing and grind to a rava consistency.",
+    "### Variation 2 (Soundravalli Sambar Powder)",
+    "**Ingredients:** Dhaniya (1 padi), Cumin (3 veesampadi), Dry Red Chili (1 veesampadi), Rice (Raw & Parboiled), Dals (Chana, Toor, Urad), Turmeric Sticks (50g).",
+    "**Method:** Sun-dry chilies and turmeric. Dry roast all other items individually. Grind in a mill and store.",
+    "### Variation 3 (Batch 3)",
+    "**Ingredients:** Red Chili (1 padi), Dals & Rice, Coriander (1/4 padi), Turmeric sticks.",
+    "**Method:** Sun-dry everything and grind in a mill."
+  ],
+  "notes": [],
+  "default_servings": 0
+}

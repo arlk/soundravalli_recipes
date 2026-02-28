@@ -1,0 +1,21 @@
+{
+  "id": "21",
+  "title_en": "Thavala Vadai",
+  "title_ta": "தவல வடை",
+  "category": "Snacks and Appetizers",
+  "ingredients": [
+    "Rice & Dals (Toor, Chana, Urad, Moong)",
+    "Red Chilies - 12",
+    "Coconut pieces",
+    "Hing & Salt"
+  ],
+  "method": [
+    "Soak rice and main dals for 1 hour; grind coarsely with chilies and salt.",
+    "Add separately soaked moong/urad dal and coconut pieces.",
+    "Deep fry ladles of batter until crunchy."
+  ],
+  "notes": [
+    "Amma's Note: Makes about 50 vadas. Serve with chutney."
+  ],
+  "default_servings": 10
+}

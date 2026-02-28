@@ -1,0 +1,19 @@
+{
+  "id": "8",
+  "title_en": "Idli Bites",
+  "title_ta": "இட்லி பைட்ஸ்",
+  "category": "Snacks and Appetizers",
+  "ingredients": [
+    "Soft idlis",
+    "Pickle masala (or mint chutney/chili thuvaiyal)",
+    "Oil for frying"
+  ],
+  "method": [
+    "Cut idlis into four pieces.",
+    "Place pickle masala between the cut idli pieces and fry in oil until golden brown.",
+    "It tastes \"bale rusi\" (excellent).",
+    "Instead of pickle masala, mint chutney or chili thuvaiyal can be used."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

@@ -1,0 +1,24 @@
+{
+  "id": "9",
+  "title_en": "Fried Mushroom",
+  "title_ta": "ப்ரைடு மஷ்ரும்",
+  "category": "Snacks and Appetizers",
+  "ingredients": [
+    "Mushroom - 250g",
+    "Egg - 1",
+    "Maida - 50g",
+    "Breadcrumbs - 50g",
+    "Salt - 10g",
+    "Pepper Powder - 5g",
+    "Oil - 75ml"
+  ],
+  "method": [
+    "Mix mushrooms, maida, egg, salt, and pepper with a little water.",
+    "Coat each mushroom in breadcrumbs.",
+    "Fry over medium heat."
+  ],
+  "notes": [
+    "Note: Serving this with potato chips will increase the taste further."
+  ],
+  "default_servings": 4
+}

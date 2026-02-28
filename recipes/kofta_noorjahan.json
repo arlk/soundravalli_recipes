@@ -1,0 +1,23 @@
+{
+  "id": "12",
+  "title_en": "Kofta Noorjahan",
+  "title_ta": "கோப்தா நுார்ஜஹான்",
+  "category": "Main Dishes and Curries",
+  "ingredients": [
+    "Paneer - 100g",
+    "Potato - 2 boiled",
+    "Maida - 3 tsp",
+    "Cashews & Raisins",
+    "Onion - 3",
+    "Cream - 10g",
+    "Spices (Chili, Turmeric, Dhaniya, Cumin, Garam Masala)"
+  ],
+  "method": [
+    "Mix grated paneer, mashed potatoes, green chilies, ginger-garlic paste, maida, and coriander.",
+    "Roll into balls with cashews and raisins inside; deep fry.",
+    "For Gravy: Sauté onions, ginger-garlic paste, and tomatoes.",
+    "Add spices, cashew paste, and cream; pour over fried koftas."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

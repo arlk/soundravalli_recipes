@@ -8,9 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Recipe List Logic ---
-    function initRecipeList() {
+    async function initRecipeList() {
         const recipeList = document.getElementById('recipe-list');
         const searchInput = document.getElementById('search');
+
+        let recipesIndex = [];
+
+        try {
+            const response = await fetch('recipes/index.json');
+            recipesIndex = await response.json();
+        } catch (error) {
+            console.error('Error loading recipe index:', error);
+            recipeList.innerHTML = '<p class="no-results">Error loading recipes. Please ensure you are running on a web server.</p>';
+            return;
+        }
 
         function displayRecipes(recipes) {
             recipeList.innerHTML = '';
@@ -49,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ul.className = 'recipe-item-list';
                     ul.innerHTML = groups[category].map(recipe => `
                         <li class="recipe-item">
-                            <a href="recipe.html?id=${recipe.id}" class="recipe-item-link">
+                            <a href="recipe.html?file=${recipe.file}" class="recipe-item-link">
                                 <div class="recipe-item-content">
                                     <span class="recipe-item-en">${recipe.title_en}</span>
                                     ${recipe.title_ta ? `<span class="recipe-item-ta">${recipe.title_ta}</span>` : ''}
@@ -67,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
-            const filteredRecipes = recipesData.filter(recipe => 
+            const filteredRecipes = recipesIndex.filter(recipe => 
                 recipe.title_en.toLowerCase().includes(searchTerm) || 
                 (recipe.title_ta && recipe.title_ta.toLowerCase().includes(searchTerm)) ||
                 recipe.category.toLowerCase().includes(searchTerm)
@@ -75,22 +86,41 @@ document.addEventListener('DOMContentLoaded', () => {
             displayRecipes(filteredRecipes);
         });
 
-        displayRecipes(recipesData);
+        displayRecipes(recipesIndex);
     }
 
     // --- Recipe Detail Logic ---
-    function initRecipeDetail() {
+    async function initRecipeDetail() {
         const urlParams = new URLSearchParams(window.location.search);
-        const recipeId = urlParams.get('id');
-        const recipe = recipesData.find(r => r.id === recipeId);
+        const fileName = urlParams.get('file');
         
-        if (!recipe) {
+        if (!fileName) {
+            document.getElementById('recipe-title').innerText = 'No recipe specified';
+            return;
+        }
+
+        let recipe;
+        try {
+            const response = await fetch(`recipes/${fileName}`);
+            if (!response.ok) throw new Error('Recipe not found');
+            recipe = await response.json();
+        } catch (error) {
+            console.error('Error loading recipe:', error);
             document.getElementById('recipe-title').innerText = 'Recipe not found';
             return;
         }
 
-        const defaultServings = 4;
+        // Use recipe-specific default servings or disable calculator if null/0
+        const defaultServings = recipe.default_servings || 0;
         const servingsInput = document.getElementById('servings');
+        const servingsContainer = document.querySelector('.servings-container');
+        
+        if (defaultServings > 0) {
+            servingsInput.value = defaultServings;
+            servingsContainer.style.display = 'flex';
+        } else {
+            servingsContainer.style.display = 'none';
+        }
         
         document.title = `${recipe.title_en} | Soundravalli's Recipes`;
         document.getElementById('recipe-title').innerText = recipe.title_en;
@@ -100,8 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentDiv = document.getElementById('recipe-content');
 
         function parseIngredient(ing) {
-            // Match name, then a dash/space, then a number (decimal/fraction), then unit
-            // Examples: "Cauliflower - 50g", "Tomato - 2", "Milk - 2 Liters"
             const regex = /^(.+?)\s*(?:-\s*)?(\d+(?:\.\d+)?|\d+\/\d+)\s*(.*)$/;
             const match = ing.match(regex);
             
@@ -121,17 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
         function scaleIngredients(servings) {
             let markdown = "";
             
-            if (recipe.notes.length > 0) {
+            if (recipe.notes && recipe.notes.length > 0) {
                 markdown += recipe.notes.map(note => `> ${note}`).join('\n\n') + "\n\n";
             }
 
-            if (recipe.ingredients.length > 0) {
+            if (recipe.ingredients && recipe.ingredients.length > 0) {
                 markdown += "### Ingredients\n\n";
                 markdown += recipe.ingredients.map(ingStr => {
                     const parsed = parseIngredient(ingStr);
-                    if (parsed.qty !== null) {
+                    if (parsed.qty !== null && defaultServings > 0) {
                         const scaledQty = (parsed.qty / defaultServings) * servings;
-                        // Format number nicely (remove trailing zeros, max 2 decimals)
                         const displayQty = Math.round(scaledQty * 100) / 100;
                         return `- ${parsed.name} - ${displayQty} ${parsed.unit}`;
                     }
@@ -161,6 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Initial render
-        scaleIngredients(defaultServings);
+        scaleIngredients(defaultServings || 1);
     }
 });

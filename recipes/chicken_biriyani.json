@@ -1,0 +1,41 @@
+{
+  "id": "3",
+  "title_en": "Chicken Biriyani",
+  "title_ta": "கோழி பிரியாணி",
+  "category": "Rice and Tiffin",
+  "ingredients": [
+    "Rice - 4 tumblers",
+    "Chicken - 1 kg",
+    "Curd - 1 cup",
+    "Oil - 1 cup",
+    "Ghee - 1 cup",
+    "Cardamom - 4",
+    "Cloves - 4",
+    "Cinnamon - 4",
+    "Bay leaf - a little",
+    "Chopped Onion - 2 cups",
+    "Ginger-Garlic Paste - 2 tsp",
+    "Tomato - 5",
+    "Green Chili - 30 (slit)",
+    "Chili Powder - 2 tsp",
+    "Color Powder - a little",
+    "Garam Masala - 1 tsp",
+    "Coriander and Mint Leaves - as required"
+  ],
+  "method": [
+    "Wash and clean the chicken.",
+    "Add curd, ginger-garlic paste, chili powder, color powder, and garam masala to the chicken, mix well, and let it marinate for half an hour.",
+    "Wash the rice and let it soak for half an hour.",
+    "Pour oil and ghee, once heated, add cinnamon, cloves, cardamom, and bay leaf and let them brown.",
+    "Add the chopped onions and sauté.",
+    "Once browned, add the slit green chilies and sauté.",
+    "Then add the tomatoes and sauté.",
+    "Add the marinated chicken and let it cook for a while.",
+    "Then add the soaked rice and stir gently with a ladle.",
+    "Pour in double the amount of water and close with a lid.",
+    "Once the rice is cooked and the biriyani is ready, add mint and coriander leaves.",
+    "Stir well and serve."
+  ],
+  "notes": [],
+  "default_servings": 6
+}

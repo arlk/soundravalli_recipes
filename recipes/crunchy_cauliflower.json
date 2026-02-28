@@ -1,0 +1,19 @@
+{
+  "id": "29",
+  "title_en": "Crunchy Cauliflower",
+  "title_ta": "Gobi 65",
+  "category": "Snacks and Appetizers",
+  "ingredients": [
+    "Cauliflower - 1 large",
+    "Egg - 3",
+    "Rice Flour - 50g",
+    "Ginger-Garlic Paste",
+    "Chili Powder & Spices"
+  ],
+  "method": [
+    "Beat eggs and mix with spices, flour, and cauliflower.",
+    "Deep fry in small portions."
+  ],
+  "notes": [],
+  "default_servings": 4
+}

@@ -1,0 +1,21 @@
+{
+  "id": "28",
+  "title_en": "Cold Cucumber Soup",
+  "title_ta": "கூல்கு குக்கும்பர் சூப்",
+  "category": "Soups",
+  "ingredients": [
+    "Cucumber - 500g",
+    "Onion - 100g",
+    "Cream - 200ml",
+    "Pepper - 10g",
+    "Salt - 15g"
+  ],
+  "method": [
+    "Blend cucumber and onion with water; strain.",
+    "Mix with cream and seasoning; serve chilled."
+  ],
+  "notes": [
+    "Note: Drinking this before a feast helps with digestion."
+  ],
+  "default_servings": 4
+}

@@ -13,5 +13,6 @@
 
 ## Technical Architecture
 - **Static First:** This is a pure static site. Do not introduce build steps (Webpack, Vite, etc.) or external backend dependencies.
-- **Data Driven:** All recipes must reside in `data.js`.
+- **Data Driven:** All recipes must reside in the `recipes/` directory as individual JSON files.
+- **Index Driven:** The main list is powered by `recipes/index.json`.
 - **Markdown Rendering:** Use `marked.js` via CDN for all body content rendering.
