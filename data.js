@@ -64,12 +64,19 @@ const recipesData = [
     "notes": []
   },
   {
-    "id": "7",
-    "title_en": "Rasam Powder",
+    "id": "rasam_powder",
+    "title_en": "Rasam Powder (2 Variations)",
     "title_ta": "ரசப்பொடி",
     "category": "Powders and Masalas",
-    "ingredients": ["Toor Dal - 0.5 kg", "Black Pepper - 150g", "Cumin - 200g", "Hing - 100g", "Dry Red Chilies - 300g", "Dhaniya - 0.75 kg", "Turmeric Powder - 50g", "Curry Leaves - 1 handful"],
-    "method": ["Crush the solid hing and fry it in oil and take it out.", "Place another pan on the stove and first roast the pepper lightly.", "Immediately add toor dal.", "Once that is lightly roasted, add the pinched red chilies.", "Add the dhaniya.", "After that, add curry leaves and finally cumin and roast.", "Add the fried hing to the mixture.", "After grinding this in a mixer or a mill, mix the turmeric powder well."],
+    "ingredients": [],
+    "method": [
+      "### Variation 1 (Batch 1)",
+      "**Ingredients:** Toor Dal (0.5 kg), Black Pepper (150g), Cumin (200g), Hing (100g), Dry Red Chilies (300g), Dhaniya (0.75 kg), Turmeric Powder (50g), Curry Leaves (1 handful).",
+      "**Method:** Crush the solid hing and fry it in oil and take it out. Place another pan on the stove and first roast the pepper lightly. Immediately add toor dal. Once that is lightly roasted, add the pinched red chilies. Add the dhaniya. After that, add curry leaves and finally cumin and roast. Add the fried hing to the mixture. After grinding this in a mixer or a mill, mix the turmeric powder well.",
+      "### Variation 2 (Batch 2)",
+      "**Ingredients:** Coriander (3/4 cup), Chili (1.5 cups), Pepper (2 cups), Cumin (2 cups), Chana Dal, Toor Dal (10g), Hing (5g), Mustard (1 spoon), Curry Leaves (1 handful).",
+      "**Method:** Grind and store."
+    ],
     "notes": []
   },
   {
@@ -196,15 +203,6 @@ const recipesData = [
     "category": "Rice and Tiffin",
     "ingredients": ["Raw Rice - 1/4 padi", "Toor Dal - 1/8 padi", "Onion & Coconut", "Red Chilies - 15"],
     "method": ["Grind rice, dal, chilies, and salt coarsely.", "Mix with chopped onion, coconut, and curry leaves.", "Cook on griddle with plenty of oil."],
-    "notes": []
-  },
-  {
-    "id": "24",
-    "title_en": "Rasam Powder - Batch 2",
-    "title_ta": "ரசப்பொடி",
-    "category": "Powders and Masalas",
-    "ingredients": ["Coriander, Chili, Pepper, Cumin", "Chana Dal, Toor Dal, Hing", "Curry Leaves"],
-    "method": ["Grind and store."],
     "notes": []
   },
   {
