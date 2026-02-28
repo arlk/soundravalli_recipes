@@ -13,8 +13,8 @@ def update_json_with_snippets():
         "fried_mushroom.json": "fried_mushroom.jpg",
         "garam_masala.json": "garam_masala.jpg",
         "paneer_podimas.json": "paneer_podimas.jpg",
-        "kofta_noorjahan.json": "kofta_noorjahan.jpg",
-        "coconut_burfi.json": "coconut_burfi.jpg",
+        "kofta_noorjahan.json": ["kofta_noorjahan_p1.jpg", "kofta_noorjahan_p2.jpg"],
+        "coconut_burfi.json": ["coconut_burfi.jpg", "coconut_burfi_variation_2.jpg"],
         "rava_badam_laddu.json": "rava_badam_laddu.jpg",
         "pani_puri.json": "pani_puri.jpg",
         "poli.json": "poli.jpg",
@@ -40,6 +40,14 @@ def update_json_with_snippets():
         "rasam_powder_2_variations.json": [
             "rasam_powder_batch_1.jpg", 
             "rasam_powder_batch_2.jpg"
+        ],
+        "kofta_noorjahan.json": [
+            "kofta_noorjahan_p1.jpg",
+            "kofta_noorjahan_p2.jpg"
+        ],
+        "coconut_burfi.json": [
+            "coconut_burfi.jpg",
+            "coconut_burfi_variation_2.jpg"
         ]
     }
 
@@ -52,10 +60,14 @@ def update_json_with_snippets():
         with open(file_path, 'r', encoding='utf-8') as f:
             recipe = json.load(f)
             
-        if filename in file_to_snippet:
-            recipe['original_snippets'] = [file_to_snippet[filename]]
-        elif filename in special_cases:
+        if filename in special_cases:
             recipe['original_snippets'] = special_cases[filename]
+        elif filename in file_to_snippet:
+            snippet = file_to_snippet[filename]
+            if isinstance(snippet, list):
+                recipe['original_snippets'] = snippet
+            else:
+                recipe['original_snippets'] = [snippet]
         else:
             print(f"No snippet for {filename}")
             continue
