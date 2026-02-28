@@ -1,7 +1,7 @@
 {
   "id": "1",
   "title_en": "Vegetable Hot Garlic Sauce",
-  "title_ta": "வெஜிடபிற் ஹாட் கார்யின் சாஸ்",
+  "title_ta": "வெஜிடபிள் ஹாட் கார்லிக் சாஸ்",
   "category": "Main Dishes and Curries",
   "ingredients": [
     "Cauliflower - 50g",
@@ -14,17 +14,19 @@
     "Tomato - 2",
     "Peeled Garlic - 20g",
     "Chili Powder - 10g",
-    "Salt"
+    "Salt - to taste"
   ],
   "method": [
-    "Pour oil into a pan and add onion, garlic, and chopped brinjal.",
-    "Sauté them.",
+    "Heat oil in a pan and add the onions, garlic, and chopped brinjal.",
+    "Sauté them well.",
     "Then add all the other vegetables and tomatoes.",
-    "Add salt, chili powder, and required water and let it boil.",
-    "Once the gravy thickens slightly, remove from heat.",
-    "For aroma, add lemon and curry leaves and then remove."
+    "Add salt, chili powder, and the required amount of water, then let it boil.",
+    "Once the gravy thickens slightly, remove the pan from heat.",
+    "For aroma, add chopped coriander leaves and curry leaves."
   ],
-  "notes": [],
+  "notes": [
+    "Note: This goes very well with both chapathi and rice."
+  ],
   "default_servings": 4,
   "original_snippets": [
     "vegetable_hot_garlic_sauce.jpg"
