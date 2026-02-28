@@ -110,7 +110,85 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Use recipe-specific default servings or disable calculator if null/0
+        // --- Lightbox State ---
+        let currentSnippetIndex = 0;
+        const snippets = recipe.original_snippets || [];
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function showLightboxImage(index) {
+            currentSnippetIndex = index;
+            lightboxImg.src = `assets/snippets/${snippets[currentSnippetIndex]}`;
+            lightboxCaption.innerText = `Image ${currentSnippetIndex + 1} of ${snippets.length}`;
+            
+            if (snippets.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+        }
+
+        // Attach listeners once
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let nextIdx = currentSnippetIndex - 1;
+                if (nextIdx < 0) nextIdx = snippets.length - 1;
+                showLightboxImage(nextIdx);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let nextIdx = currentSnippetIndex + 1;
+                if (nextIdx >= snippets.length) nextIdx = 0;
+                showLightboxImage(nextIdx);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeBtn.click();
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+        });
+
+        // Use event delegation for thumbnail clicks
+        const contentDiv = document.getElementById('recipe-content');
+        contentDiv.addEventListener('click', (e) => {
+            const container = e.target.closest('.snippet-container');
+            if (container) {
+                const index = parseInt(container.getAttribute('data-index'));
+                showLightboxImage(index);
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        // --- Recipe Detail Rendering ---
         const defaultServings = recipe.default_servings || 0;
         const servingsInput = document.getElementById('servings');
         const servingsContainer = document.querySelector('.servings-container');
@@ -126,8 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('recipe-title').innerText = recipe.title_en;
         document.getElementById('recipe-subtitle').innerText = recipe.title_ta || '';
         document.getElementById('recipe-category').innerHTML = `<code>${recipe.category}</code>`;
-
-        const contentDiv = document.getElementById('recipe-content');
 
         function parseIngredient(ing) {
             const regex = /^(.+?)\s*(?:-\s*)?(\d+(?:\.\d+)?|\d+\/\d+)\s*(.*)$/;
@@ -179,15 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             contentDiv.innerHTML = marked.parse(markdown);
 
-            // Add original snippets as thumbnails if available
-            if (recipe.original_snippets && recipe.original_snippets.length > 0) {
+            if (snippets.length > 0) {
                 const snippetSection = document.createElement('section');
                 snippetSection.className = 'snippet-section';
                 snippetSection.innerHTML = `
                     <h3 class="markdown-header">Original Handwritten Recipe</h3>
                     <p style="font-size: 0.85rem; color: #65676b; margin-bottom: 15px;">Click to expand handwritten notes</p>
                     <div class="snippet-grid">
-                        ${recipe.original_snippets.map((s, idx) => `
+                        ${snippets.map((s, idx) => `
                             <div class="snippet-container" data-index="${idx}">
                                 <img src="assets/snippets/${s}" alt="Handwritten snippet thumbnail" class="original-snippet">
                             </div>
@@ -195,79 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 contentDiv.appendChild(snippetSection);
-                
-                // Initialize Lightbox
-                initLightbox(recipe.original_snippets);
             }
-        }
-
-        function initLightbox(snippets) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-            const closeBtn = document.querySelector('.lightbox-close');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            let currentIndex = 0;
-
-            function showImage(index) {
-                currentIndex = index;
-                lightboxImg.src = `assets/snippets/${snippets[currentIndex]}`;
-                lightboxCaption.innerText = `Image ${currentIndex + 1} of ${snippets.length}`;
-                
-                // Show/hide nav buttons based on count
-                if (snippets.length <= 1) {
-                    prevBtn.style.display = 'none';
-                    nextBtn.style.display = 'none';
-                } else {
-                    prevBtn.style.display = 'flex';
-                    nextBtn.style.display = 'flex';
-                }
-            }
-
-            // Click on thumbnail
-            document.querySelectorAll('.snippet-container').forEach(container => {
-                container.addEventListener('click', () => {
-                    const index = parseInt(container.getAttribute('data-index'));
-                    showImage(index);
-                    lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                });
-            });
-
-            // Close lightbox
-            const closeLightbox = () => {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            };
-
-            closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
-
-            // Navigation
-            prevBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                let newIndex = currentIndex - 1;
-                if (newIndex < 0) newIndex = snippets.length - 1;
-                showImage(newIndex);
-            });
-
-            nextBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                let newIndex = currentIndex + 1;
-                if (newIndex >= snippets.length) newIndex = 0;
-                showImage(newIndex);
-            });
-
-            // Keyboard support
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('active')) return;
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') prevBtn.click();
-                if (e.key === 'ArrowRight') nextBtn.click();
-            });
         }
 
         servingsInput.addEventListener('input', () => {
@@ -277,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Initial render
         scaleIngredients(defaultServings || 1);
 
         // --- Cusdis Integration ---
