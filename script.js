@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Use recipe-specific default servings or disable calculator if null/0
         const defaultServings = recipe.default_servings || 0;
         const servingsInput = document.getElementById('servings');
         const servingsContainer = document.querySelector('.servings-container');
@@ -177,6 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }).join('\n\n') + "\n";
 
             contentDiv.innerHTML = marked.parse(markdown);
+
+            // Add original snippets if available
+            if (recipe.original_snippets && recipe.original_snippets.length > 0) {
+                const snippetSection = document.createElement('section');
+                snippetSection.className = 'snippet-section';
+                snippetSection.innerHTML = `
+                    <h3 class="markdown-header">Original Handwritten Recipe</h3>
+                    <div class="snippet-grid">
+                        ${recipe.original_snippets.map(s => `
+                            <div class="snippet-container">
+                                <img src="assets/snippets/${s}" alt="Handwritten snippet" class="original-snippet">
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                contentDiv.appendChild(snippetSection);
+            }
         }
 
         servingsInput.addEventListener('input', () => {
@@ -192,8 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Cusdis Integration ---
         const cusdisThread = document.getElementById('cusdis_thread');
         if (cusdisThread) {
-            // Use filename as unique ID (e.g. "chicken_biriyani.json")
-            // Ensure we use a clean ID without extension for safety
             const pageId = fileName.replace('.json', ''); 
             const pageUrl = window.location.href;
             const pageTitle = recipe.title_en;
@@ -202,8 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cusdisThread.setAttribute('data-page-url', pageUrl);
             cusdisThread.setAttribute('data-page-title', pageTitle);
 
-            // Dynamically load the script AFTER settings attributes
-            // This prevents race conditions where the script loads before ID is set
             if (!document.getElementById('cusdis-script')) {
                 const script = document.createElement('script');
                 script.id = 'cusdis-script';
@@ -212,7 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 script.defer = true;
                 document.body.appendChild(script);
             } else if (window.CUSDIS) {
-                // If already loaded, trigger a re-render for the new recipe
                 window.CUSDIS.renderWidget(cusdisThread);
             }
         }

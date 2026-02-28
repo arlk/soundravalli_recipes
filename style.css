@@ -41,6 +41,19 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+header h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -58,19 +71,6 @@ header {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #eee;
-}
-
-header h1 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-header p {
-    font-size: 0.9rem;
-    color: var(--secondary-text);
-    margin-bottom: 15px;
 }
 
 #search {
@@ -236,6 +236,32 @@ header p {
     background-color: #f9f9f9;
 }
 
+/* Snippet Section */
+.snippet-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.snippet-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.snippet-container {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.original-snippet {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .comments-section {
     margin-top: 60px;
     padding: 40px 30px;
@@ -257,9 +283,9 @@ header p {
 
 #cusdis_thread iframe {
     width: 100% !important;
-    min-height: 500px; /* Provides a better default height */
+    min-height: 500px;
     border: none !important;
-    overflow: hidden !important; /* Removes the scrollbar */
+    overflow: hidden !important;
 }
 
 footer {
@@ -286,5 +312,9 @@ footer {
     .recipe-item-content {
         flex-direction: column;
         gap: 0;
+    }
+    
+    .comments-section {
+        padding: 30px 15px;
     }
 }
