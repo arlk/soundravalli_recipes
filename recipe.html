@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundravalli's Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="recipe-detail-page">
+    <header>
+        <div class="container header-content">
+            <div class="header-text">
+                <a href="index.html" class="back-link">← Back to Recipes</a>
+                <h1 id="recipe-title">Loading...</h1>
+                <div id="recipe-subtitle" class="tamil-title"></div>
+                <div id="recipe-category" class="category-tag"></div>
+                <div class="servings-container">
+                    <label for="servings">Servings:</label>
+                    <input type="number" id="servings" value="4" min="1" max="100">
+                </div>
+            </div>
+            <div class="author-photo">
+                <img src="photo.jpeg" alt="Soundravalli">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="recipe-content">
+            <!-- Content will be injected here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Soundravalli's Recipes. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const isRecipeDetail = document.body.classList.contains('recipe-detail-page');
+    
+    if (isRecipeDetail) {
+        initRecipeDetail();
+    } else {
+        initRecipeList();
+    }
+
+    // --- Recipe List Logic ---
+    function initRecipeList() {
+        const recipeList = document.getElementById('recipe-list');
+        const searchInput = document.getElementById('search');
+
+        function displayRecipes(recipes) {
+            recipeList.innerHTML = '';
+            
+            if (recipes.length === 0) {
+                recipeList.innerHTML = '<p class="no-results">No recipes found matching your search.</p>';
+                return;
+            }
+
+            const groups = recipes.reduce((acc, recipe) => {
+                if (!acc[recipe.category]) acc[recipe.category] = [];
+                acc[recipe.category].push(recipe);
+                return acc;
+            }, {});
+
+            const categoryOrder = [
+                'Rice and Tiffin',
+                'Main Dishes and Curries',
+                'Snacks and Appetizers',
+                'Pickles',
+                'Powders and Masalas',
+                'Sweets and Desserts',
+                'Soups'
+            ];
+
+            categoryOrder.forEach(category => {
+                if (groups[category]) {
+                    const section = document.createElement('section');
+                    section.className = 'category-section';
+                    
+                    const h2 = document.createElement('h2');
+                    h2.className = 'category-title';
+                    h2.innerText = category;
+                    
+                    const ul = document.createElement('ul');
+                    ul.className = 'recipe-item-list';
+                    ul.innerHTML = groups[category].map(recipe => `
+                        <li class="recipe-item">
+                            <a href="recipe.html?id=${recipe.id}" class="recipe-item-link">
+                                <div class="recipe-item-content">
+                                    <span class="recipe-item-en">${recipe.title_en}</span>
+                                    ${recipe.title_ta ? `<span class="recipe-item-ta">${recipe.title_ta}</span>` : ''}
+                                </div>
+                            </a>
+                        </li>
+                    `).join('');
+                    
+                    section.appendChild(h2);
+                    section.appendChild(ul);
+                    recipeList.appendChild(section);
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredRecipes = recipesData.filter(recipe => 
+                recipe.title_en.toLowerCase().includes(searchTerm) || 
+                (recipe.title_ta && recipe.title_ta.toLowerCase().includes(searchTerm)) ||
+                recipe.category.toLowerCase().includes(searchTerm)
+            );
+            displayRecipes(filteredRecipes);
+        });
+
+        displayRecipes(recipesData);
+    }
+
+    // --- Recipe Detail Logic ---
+    function initRecipeDetail() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = urlParams.get('id');
+        const recipe = recipesData.find(r => r.id === recipeId);
+        
+        if (!recipe) {
+            document.getElementById('recipe-title').innerText = 'Recipe not found';
+            return;
+        }
+
+        const defaultServings = 4;
+        const servingsInput = document.getElementById('servings');
+        
+        document.title = `${recipe.title_en} | Soundravalli's Recipes`;
+        document.getElementById('recipe-title').innerText = recipe.title_en;
+        document.getElementById('recipe-subtitle').innerText = recipe.title_ta || '';
+        document.getElementById('recipe-category').innerHTML = `<code>${recipe.category}</code>`;
+
+        const contentDiv = document.getElementById('recipe-content');
+
+        function parseIngredient(ing) {
+            // Match name, then a dash/space, then a number (decimal/fraction), then unit
+            // Examples: "Cauliflower - 50g", "Tomato - 2", "Milk - 2 Liters"
+            const regex = /^(.+?)\s*(?:-\s*)?(\d+(?:\.\d+)?|\d+\/\d+)\s*(.*)$/;
+            const match = ing.match(regex);
+            
+            if (match) {
+                let qty = match[2];
+                if (qty.includes('/')) {
+                    const [num, den] = qty.split('/');
+                    qty = parseFloat(num) / parseFloat(den);
+                } else {
+                    qty = parseFloat(qty);
+                }
+                return { name: match[1].trim(), qty: qty, unit: match[3].trim() };
+            }
+            return { name: ing, qty: null, unit: '' };
+        }
+
+        function scaleIngredients(servings) {
+            let markdown = "";
+            
+            if (recipe.notes.length > 0) {
+                markdown += recipe.notes.map(note => `> ${note}`).join('\n\n') + "\n\n";
+            }
+
+            if (recipe.ingredients.length > 0) {
+                markdown += "### Ingredients\n\n";
+                markdown += recipe.ingredients.map(ingStr => {
+                    const parsed = parseIngredient(ingStr);
+                    if (parsed.qty !== null) {
+                        const scaledQty = (parsed.qty / defaultServings) * servings;
+                        // Format number nicely (remove trailing zeros, max 2 decimals)
+                        const displayQty = Math.round(scaledQty * 100) / 100;
+                        return `- ${parsed.name} - ${displayQty} ${parsed.unit}`;
+                    }
+                    return `- ${ingStr}`;
+                }).join('\n') + "\n\n";
+            }
+
+            markdown += "### Method\n\n";
+            let stepCounter = 1;
+            markdown += recipe.method.map((step) => {
+                if (step.startsWith('###')) {
+                    stepCounter = 1;
+                    return step;
+                }
+                if (step.startsWith('**')) return step;
+                return `${stepCounter++}. ${step}`;
+            }).join('\n\n') + "\n";
+
+            contentDiv.innerHTML = marked.parse(markdown);
+        }
+
+        servingsInput.addEventListener('input', () => {
+            const val = parseInt(servingsInput.value);
+            if (val > 0) {
+                scaleIngredients(val);
+            }
+        });
+
+        // Initial render
+        scaleIngredients(defaultServings);
+    }
+});
