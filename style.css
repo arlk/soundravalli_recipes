@@ -242,7 +242,6 @@ header p {
     background-color: #f9f9f9;
     border-radius: 8px;
     border: 1px solid #eee;
-    overflow: visible; /* Ensure it's not scrollable */
 }
 
 .comments-section h3 {
@@ -251,8 +250,16 @@ header p {
     color: var(--primary-color);
 }
 
+/* Force Cusdis iframe to expand and not scroll */
 #cusdis_thread {
-    min-height: 200px;
+    width: 100%;
+}
+
+#cusdis_thread iframe {
+    width: 100% !important;
+    min-height: 500px; /* Provides a better default height */
+    border: none !important;
+    overflow: hidden !important; /* Removes the scrollbar */
 }
 
 footer {
