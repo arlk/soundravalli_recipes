@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Use recipe-specific default servings or disable calculator if null/0
         const defaultServings = recipe.default_servings || 0;
         const servingsInput = document.getElementById('servings');
         const servingsContainer = document.querySelector('.servings-container');
@@ -193,7 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Cusdis Integration ---
         const cusdisThread = document.getElementById('cusdis_thread');
         if (cusdisThread) {
-            const pageId = fileName; // Use filename as unique ID
+            // Use filename as unique ID (e.g. "chicken_biriyani.json")
+            // Ensure we use a clean ID without extension for safety
+            const pageId = fileName.replace('.json', ''); 
             const pageUrl = window.location.href;
             const pageTitle = recipe.title_en;
 
@@ -201,8 +202,17 @@ document.addEventListener('DOMContentLoaded', () => {
             cusdisThread.setAttribute('data-page-url', pageUrl);
             cusdisThread.setAttribute('data-page-title', pageTitle);
 
-            // If Cusdis is already loaded (e.g. back navigation), re-render it
-            if (window.CUSDIS) {
+            // Dynamically load the script AFTER settings attributes
+            // This prevents race conditions where the script loads before ID is set
+            if (!document.getElementById('cusdis-script')) {
+                const script = document.createElement('script');
+                script.id = 'cusdis-script';
+                script.src = 'https://cusdis.com/js/cusdis.es.js';
+                script.async = true;
+                script.defer = true;
+                document.body.appendChild(script);
+            } else if (window.CUSDIS) {
+                // If already loaded, trigger a re-render for the new recipe
                 window.CUSDIS.renderWidget(cusdisThread);
             }
         }
