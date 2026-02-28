@@ -4,25 +4,26 @@
   "title_ta": "தக்காளி ஊறுகாய்",
   "category": "Pickles",
   "ingredients": [
-    "Tomato - 1 kg",
-    "Tamarind - 0.25 kg",
-    "Garlic - 100g",
-    "Gingelly Oil - 200g",
-    "Red Chili Powder - 0.125 cup",
-    "Salt - 0.125 cup"
+    "Well-ripened Tomatoes - 1 kg",
+    "Tamarind - 250g",
+    "Salt - 1/8 cup",
+    "Red Chili Powder - 1/8 cup",
+    "Mustard seeds - 10g",
+    "Fenugreek - 10g",
+    "Gingelly Oil - 0.25 liter"
   ],
   "method": [
-    "Sauté tomatoes in a little oil. Add seedless/fiberless tamarind to it and sauté well.",
-    "Let the mixture cool down and then grind it in a mixer.",
-    "Peel the garlic.",
-    "Heat gingelly oil in a pan. Temper with mustard seeds and curry leaves.",
-    "Add the peeled garlic and sauté. Then add the ground tomato paste and mix well.",
-    "Do not forget to add the chili powder and salt powder during this process.",
-    "Once it has cooled down completely, store it in a clean bottle."
+    "Wash the tomatoes and wipe them with a dry cloth.",
+    "Chop the tomatoes into small pieces.",
+    "Clean the tamarind by removing seeds and fibers.",
+    "Dry roast the mustard seeds and fenugreek individually and powder them.",
+    "In a pan, add a little oil and sauté the chopped tomatoes and tamarind until the tomatoes turn mushy and the moisture evaporates.",
+    "Add the salt and red chili powder, and continue to sauté for a few more minutes.",
+    "Add the rest of the oil and the powdered mustard-fenugreek mixture.",
+    "Mix well and simmer until the oil starts to separate.",
+    "Allow it to cool and store in a clean, dry glass jar."
   ],
-  "notes": [
-    "Note: Don't forget to add chili powder and salt powder."
-  ],
+  "notes": [],
   "default_servings": 0,
   "original_snippets": [
     "tomato_pickle.jpg"

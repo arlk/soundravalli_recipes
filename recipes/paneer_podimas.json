@@ -1,35 +1,34 @@
 {
-  "id": "11",
+  "id": "13",
   "title_en": "Paneer Podimas",
   "title_ta": "பனீர் பொடிமாஸ்",
   "category": "Main Dishes and Curries",
   "ingredients": [
-    "Milk - 2 Liters",
-    "Vinegar - 5 tsp",
-    "Onion - 3",
-    "Tomato - 3",
-    "Ginger - 5g",
-    "Green Chili - 5g",
-    "Coriander - 0.25 bundles",
-    "Turmeric Powder - 0.25 tsp",
-    "Garam Masala - 0.25 tsp",
-    "Curry Leaves - a little",
-    "Cumin - 1 tsp",
-    "Salt - to taste"
+    "Paneer - 250g",
+    "Grated Coconut - 1 tbsp",
+    "Lemon Juice - 2 tsp",
+    "Onion - 2 (large, finely chopped)",
+    "Green Chilies - 6",
+    "Ginger - 1 inch piece",
+    "Coriander - 1/4 bundle",
+    "Turmeric Powder - 1/4 tsp",
+    "Garam Masala - 1/4 tsp",
+    "Ghee or Oil - 1 tbsp",
+    "Salt - to taste",
+    "Curry Leaves - as required"
   ],
   "method": [
-    "Boil 2 liters of milk in a vessel. Once boiling, add vinegar to curdle the milk.",
-    "Strain it through a clean cloth and squeeze out the water well. This is your paneer.",
-    "Heat oil in a pan, add cumin and sauté. Add chopped onions and sauté until translucent.",
-    "Add turmeric powder, salt, and garam masala, then stir.",
-    "Add crushed green chilies and sauté.",
-    "Crumble the paneer and add it to the pan. Mix well.",
-    "Then add chopped tomatoes and ginger sliced lengthwise.",
-    "Sauté well until the tomatoes soften, then sprinkle chopped coriander leaves and remove from heat."
+    "Grate the paneer using a grater or mash it with your hands.",
+    "Finely chop the onions, ginger, and green chilies.",
+    "Heat ghee or oil in a pan. Add the chopped onions and sauté until they turn translucent.",
+    "Add the green chilies and ginger, and sauté for a minute.",
+    "Add the grated paneer, turmeric powder, and salt. Mix well.",
+    "Cook on low heat for 5 minutes, stirring occasionally.",
+    "Add the grated coconut and garam masala. Give it a good mix.",
+    "Finally, add the lemon juice and chopped coriander leaves.",
+    "Garnish with curry leaves and serve hot with rotis or bread."
   ],
-  "notes": [
-    "Note: This can also be made with store-bought paneer."
-  ],
+  "notes": [],
   "default_servings": 4,
   "original_snippets": [
     "paneer_podimas.jpg"

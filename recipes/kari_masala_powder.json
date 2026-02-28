@@ -1,18 +1,22 @@
 {
-  "id": "25",
+  "id": "kari_masala_powder",
   "title_en": "Kari Masala Powder",
-  "title_ta": "கறிமசால் பொடி",
+  "title_ta": "கறி மசாலா பொடி",
   "category": "Powders and Masalas",
   "ingredients": [
-    "Dry Red Chilies - 0.5 kg",
-    "Coriander seeds - 300g",
-    "Fennel seeds (Sombu) - 150g",
-    "Chana Dal - 75g",
-    "Poppy seeds (Kasakasa) - 50g",
-    "Cinnamon, Cloves, Cardamom - a little"
+    "Dry Red Chilies - 500g",
+    "Coriander seeds - 1 kg",
+    "Turmeric sticks - 100g",
+    "Cumin - 100g",
+    "Black Pepper - 50g",
+    "Toor Dal - 100g",
+    "Chana Dal - 100g",
+    "Raw Rice - 100g"
   ],
   "method": [
-    "Lightly roast all the ingredients and grind them into a powder."
+    "Sun-dry all the ingredients well.",
+    "Grind the mixture in a mill to a fine powder.",
+    "Store in an airtight container."
   ],
   "notes": [],
   "default_servings": 0,
