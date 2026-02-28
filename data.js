@@ -22,7 +22,7 @@ const recipesData = [
     "title_en": "Chicken Biriyani",
     "title_ta": "கோழி பிரியாணி",
     "category": "Rice and Tiffin",
-    "ingredients": ["Rice - 4 tumblers", "Chicken - 1 kg", "Curd - 1 cup", "Oil - 1 cup", "Ghee - 1 cup", "Cardamom - 4", "Cloves - 4", "Cinnamon - 4", "Bay leaf - a little", "Chopped Onion - 2 cups", "Ginger-Garlic Paste - 2 tsp", "Tomato - 5", "Green Chili - 30 (slit)", "Chili Powder", "Color Powder - a little", "Garam Masala", "Coriander and Mint Leaves - as required"],
+    "ingredients": ["Rice - 4 tumblers", "Chicken - 1 kg", "Curd - 1 cup", "Oil - 1 cup", "Ghee - 1 cup", "Cardamom - 4", "Cloves - 4", "Cinnamon - 4", "Bay leaf - a little", "Chopped Onion - 2 cups", "Ginger-Garlic Paste - 2 tsp", "Tomato - 5", "Green Chili - 30 (slit)", "Chili Powder - 2 tsp", "Color Powder - a little", "Garam Masala - 1 tsp", "Coriander and Mint Leaves - as required"],
     "method": ["Wash and clean the chicken.", "Add curd, ginger-garlic paste, chili powder, color powder, and garam masala to the chicken, mix well, and let it marinate for half an hour.", "Wash the rice and let it soak for half an hour.", "Pour oil and ghee, once heated, add cinnamon, cloves, cardamom, and bay leaf and let them brown.", "Add the chopped onions and sauté.", "Once browned, add the slit green chilies and sauté.", "Then add the tomatoes and sauté.", "Add the marinated chicken and let it cook for a while.", "Then add the soaked rice and stir gently with a ladle.", "Pour in double the amount of water and close with a lid.", "Once the rice is cooked and the biriyani is ready, add mint and coriander leaves.", "Stir well and serve."],
     "notes": []
   },
@@ -33,7 +33,7 @@ const recipesData = [
     "category": "Sweets and Desserts",
     "ingredients": ["Basmati rice - 200g", "Ghee", "Milk - 8 tumblers", "Sugar - 2 tumblers", "Cashew nuts - 100g", "Saffron - 0.5g", "Cardamom powder", "Pistachios"],
     "method": ["Roast rice in ghee until golden brown on low flame.", "Wash roasted rice and cook in 3/4 tumbler water until soft.", "Add milk 2 tumblers at a time, stirring until reduced.", "Continue until all 8 tumblers of milk are used and reduced to about 5 tumblers.", "Add sugar and powdered cashew nuts; cook for 5 minutes.", "Garnish with chopped pistachios, roasted cashews, saffron, and cardamom powder."],
-    "notes": []
+    "notes": ["Note: This makes approximately 5 tumblers of payasam."]
   },
   {
     "id": "5",
@@ -74,7 +74,7 @@ const recipesData = [
       "**Ingredients:** Toor Dal (0.5 kg), Black Pepper (150g), Cumin (200g), Hing (100g), Dry Red Chilies (300g), Dhaniya (0.75 kg), Turmeric Powder (50g), Curry Leaves (1 handful).",
       "**Method:** Crush the solid hing and fry it in oil and take it out. Place another pan on the stove and first roast the pepper lightly. Immediately add toor dal. Once that is lightly roasted, add the pinched red chilies. Add the dhaniya. After that, add curry leaves and finally cumin and roast. Add the fried hing to the mixture. After grinding this in a mixer or a mill, mix the turmeric powder well.",
       "### Variation 2 (Batch 2)",
-      "**Ingredients:** Coriander (3/4 cup), Chili (1.5 cups), Pepper (2 cups), Cumin (2 cups), Chana Dal, Toor Dal (10g), Hing (5g), Mustard (1 spoon), Curry Leaves (1 handful).",
+      "**Ingredients:** Coriander (4 cups), Chili (1.5 cups), Pepper (2 cups), Cumin (2 cups), Chana Dal, Toor Dal (10g), Hing (5g), Mustard (1 spoon), Curry Leaves (1 handful).",
       "**Method:** Grind and store."
     ],
     "notes": []
@@ -111,7 +111,7 @@ const recipesData = [
     "title_en": "Paneer Podimas",
     "title_ta": "பனீர் பொடிமாஸ்",
     "category": "Main Dishes and Curries",
-    "ingredients": ["Milk - 2 Liters", "Vinegar - 5 tsp", "Onion - 3", "Tomato - 3", "Ginger - 5g", "Green Chili - 5", "Coriander", "Turmeric Powder", "Garam Masala", "Curry Leaves", "Cumin", "Salt"],
+    "ingredients": ["Milk - 2 Liters", "Vinegar - 5 tsp", "Onion - 3", "Tomato - 3", "Ginger - 5g", "Green Chili - 5", "Coriander - 0.25 bundles", "Turmeric Powder - 0.25 tsp", "Garam Masala - 0.25 tsp", "Curry Leaves", "Cumin - 1 tsp", "Salt"],
     "method": ["Boil milk and add vinegar to curdle; strain through cloth to get paneer.", "Sauté cumin and chopped onions in oil until golden.", "Add turmeric, salt, garam masala, and crushed green chilies.", "Crumble paneer and add to pan.", "Add chopped tomatoes and ginger strips; sauté well and garnish with coriander."],
     "notes": ["Note: This can also be made with store-bought paneer."]
   },
@@ -138,7 +138,7 @@ const recipesData = [
     "title_en": "Rava Badam Laddu",
     "title_ta": "ரவ் பாதா சாக்",
     "category": "Sweets and Desserts",
-    "ingredients": ["Fine Rava - 1 cup", "Sugar - 1 cup", "Milk - 1/2 cup", "Badam & Cashews", "Cardamom", "Raisins"],
+    "ingredients": ["Fine Rava - 1 cup", "Sugar - 1 cup", "Milk - 0.5 cups", "Badam & Cashews", "Cardamom - 6", "Raisins - 10"],
     "method": ["Roast rava in ghee.", "Add milk and sugar; stir on low flame until halwa consistency.", "Form balls and decorate with cashews."],
     "notes": []
   },
@@ -147,7 +147,7 @@ const recipesData = [
     "title_en": "Pani Puri",
     "title_ta": "பானி பூரி",
     "category": "Snacks and Appetizers",
-    "ingredients": ["Rava - 2 cups", "Maida - 1 cup", "Mint, Ginger, Green Chilies", "Tamarind", "Jaggery", "Boiled Green Gram"],
+    "ingredients": ["Rava - 2 cups", "Maida - 1 cup", "Mint, Ginger, Green Chilies", "Tamarind", "Jaggery - 0.5 cup", "Boiled Green Gram - 1 cup"],
     "method": ["Knead rava, maida, oil, and salt; cut circles and fry puris.", "For Pani: Blend green chilies, mint, and ginger with water; add lemon, sugar, and cumin salt.", "For Chutney: Mix tamarind extract with chili powder, cumin salt, and jaggery.", "Serve puris filled with green gram, chutney, and pani."],
     "notes": []
   },
@@ -165,7 +165,7 @@ const recipesData = [
     "title_en": "Appam",
     "title_ta": "ஆப்பம்",
     "category": "Rice and Tiffin",
-    "ingredients": ["Parboiled & Raw Rice - 1 tumbler each", "Sago - 1 tbsp", "Baking soda", "Salt"],
+    "ingredients": ["Parboiled & Raw Rice - 1 tumbler each", "Sago - 7 tbsp", "Baking soda", "Salt"],
     "method": ["Soak and grind rice finely.", "Mix with sago and salt.", "Add baking soda in the morning and prepare appams."],
     "notes": []
   },
@@ -174,7 +174,7 @@ const recipesData = [
     "title_en": "Lemon Pickle",
     "title_ta": "எலுமிச்சம்பழ ஊறுகாய்",
     "category": "Pickles",
-    "ingredients": ["Lemons - 100", "Rock Salt", "Red Chili Powder", "Fenugreek & Hing", "Gingelly Oil"],
+    "ingredients": ["Lemons - 100", "Rock Salt - 0.25 padi", "Red Chili Powder - 0.5 padi", "Fenugreek & Hing", "Gingelly Oil"],
     "method": ["Soak cut lemons in salt for a month.", "Add roasted fenugreek, hing, and chili powder.", "Temper with mustard in gingelly oil."],
     "notes": []
   },
@@ -183,7 +183,7 @@ const recipesData = [
     "title_en": "Tomato Pickle",
     "title_ta": "தக்காளி ஊறுகாய்",
     "category": "Pickles",
-    "ingredients": ["Tomato - 1 kg", "Tamarind - 1/4 kg", "Garlic - 100g", "Gingelly Oil", "Chili Powder"],
+    "ingredients": ["Tomato - 1 kg", "Tamarind - 0.25 kg", "Garlic - 100g", "Gingelly Oil - 200g", "Red Chili Powder - 0.125 padi", "Salt - 0.125 padi"],
     "method": ["Sauté tomatoes and tamarind; grind once cooled.", "Temper mustard, curry leaves, and garlic in oil.", "Add tomato paste and sauté well."],
     "notes": ["Note: Don't forget to add chili powder and salt powder."]
   },
@@ -201,7 +201,7 @@ const recipesData = [
     "title_en": "Adai",
     "title_ta": "அடை",
     "category": "Rice and Tiffin",
-    "ingredients": ["Raw Rice - 1/4 padi", "Toor Dal - 1/8 padi", "Onion & Coconut", "Red Chilies - 15"],
+    "ingredients": ["Raw Rice - 0.25 padi", "Toor Dal - 0.125 padi", "Onion & Coconut", "Red Chilies - 15"],
     "method": ["Grind rice, dal, chilies, and salt coarsely.", "Mix with chopped onion, coconut, and curry leaves.", "Cook on griddle with plenty of oil."],
     "notes": []
   },
@@ -219,14 +219,14 @@ const recipesData = [
     "title_en": "Gobi Manchurian",
     "title_ta": "கோபி மஞ்சூரியன்",
     "category": "Main Dishes and Curries",
-    "ingredients": ["Cauliflower - 400g", "Carrot - 200g", "Almonds - 100g", "Capsicum & Onion", "Soy Sauce & Vinegar"],
+    "ingredients": ["Cauliflower - 400g", "Carrot - 200g", "Almonds - 100g", "Capsicum & Onion", "Soy Sauce - 2 tbsp", "Vinegar - 1 tbsp", "Salt/MSG - 1 tsp"],
     "method": ["Sauté veg and ginger-garlic paste.", "Add cornflour-soy sauce slurry and boil until thick.", "Add roasted almonds."],
     "notes": []
   },
   {
     "id": "27",
     "title_en": "Vegetable Mandi",
-    "title_ta": "",
+    "title_ta": "காய்கறி மண்டி",
     "category": "Main Dishes and Curries",
     "ingredients": ["Assorted Veg", "Small Onions, Garlic, Green Chilies", "Tamarind", "Grated Coconut"],
     "method": ["Temper spices and sauté onions, garlic, and chilies.", "Add veg and water; cook until tender.", "Add tamarind extract, salt, and coconut; boil once."],
@@ -237,8 +237,8 @@ const recipesData = [
     "title_en": "Cold Cucumber Soup",
     "title_ta": "கூல்கு குக்கும்பர் சூப்",
     "category": "Soups",
-    "ingredients": ["Cucumber - 500g", "Onion - 100g", "Cream - 200mg", "Pepper & Salt"],
-    "method": ["Chop cucumber and onion, add required water, grind in a mixer, and strain.", "Mix with cream, pepper, and salt; serve chilled."],
+    "ingredients": ["Cucumber - 500g", "Onion - 100g", "Cream - 200ml", "Pepper - 10g", "Salt - 15g"],
+    "method": ["Blend cucumber and onion with water; strain.", "Mix with cream and seasoning; serve chilled."],
     "notes": ["Note: Drinking this before a feast helps with digestion."]
   },
   {
@@ -247,7 +247,7 @@ const recipesData = [
     "title_ta": "Gobi 65",
     "category": "Snacks and Appetizers",
     "ingredients": ["Cauliflower - 1 large", "Egg - 3", "Rice Flour - 50g", "Ginger-Garlic Paste", "Chili Powder & Spices"],
-    "method": ["Break the eggs into a vessel and beat well.", "Add ginger-garlic paste, dhaniya powder, chili powder, salt powder, color, cumin powder, and chopped cauliflower; mix well.", "Pour oil in a pan, once heated, put the cauliflower in small portions and fry."],
+    "method": ["Beat eggs and mix with spices, flour, and cauliflower.", "Deep fry in small portions."],
     "notes": []
   }
 ];
