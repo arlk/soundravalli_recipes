@@ -244,13 +244,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
             markdown += "### Method\n\n";
             let stepCounter = 1;
-            markdown += recipe.method.map((step) => {
-                if (step.startsWith('###')) {
+            
+            // Split methods by line to handle ingredients correctly within variations
+            const flattenedSteps = recipe.method.flatMap(step => step.split('\n'));
+            
+            markdown += flattenedSteps.map((line) => {
+                const trimmedLine = line.trim();
+                
+                // Keep headers as is
+                if (trimmedLine.startsWith('###')) {
                     stepCounter = 1;
-                    return step;
+                    return line;
                 }
-                if (step.startsWith('**')) return step;
-                return `${stepCounter++}. ${step}`;
+                
+                // Keep bolded text as is
+                if (trimmedLine.startsWith('**')) {
+                    return line;
+                }
+                
+                // If it's a bullet point, keep it as a bullet
+                if (trimmedLine.startsWith('-')) {
+                    return line;
+                }
+                
+                // If it's empty, keep it empty
+                if (!trimmedLine) {
+                    return line;
+                }
+
+                // Otherwise, it's a numbered step
+                return `${stepCounter++}. ${line}`;
             }).join('\n\n') + "\n";
 
             contentDiv.innerHTML = marked.parse(markdown);
