@@ -9,14 +9,15 @@
 
 ## Content Standards
 
-- **Recipe Unification:** Group variations of the same base recipe (like Sambar or Rasam powders) into a single recipe entry using subheadings (e.g., `### Variation 1`).
+- **Recipe Unification:** Group variations of the same base recipe (like Sambar or Rasam powders) into a single recipe entry using the `variations` array structure in the JSON data.
 - **Methods:** Always render recipe methods as numbered lists.
 - **Tamil Support:** Always include the Tamil translation for recipe titles where available.
 - **Portion Adjustments:** Recipes should include a `default_servings` value. Set to `0` for recipes like powders or pickles where a serving calculator is inappropriate.
 
 ## Technical Architecture
 
-- **Static First:** This is a pure static site. Do not introduce build steps (Webpack, Vite, etc.) or external backend dependencies.
+- **Static First:** This is a pure static site. Do not introduce backend dependencies.
 - **Data Driven:** All recipes must reside in the `recipes/` directory as individual JSON files.
-- **Index Driven:** The main list is powered by `recipes/index.json`.
+- **Variations Structure:** For multiple variations, use the `variations: [{ title, ingredients: [], method: [] }]` schema to ensure proper rendering and list numbering.
+- **Code Hygiene:** Adhere to Prettier formatting standards. Ensure `husky` hooks are initialized locally.
 - **Markdown Rendering:** Use `marked.js` via CDN for all body content rendering.
