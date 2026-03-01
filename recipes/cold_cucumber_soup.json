@@ -14,11 +14,7 @@
     "Blend cucumber and onion with water; strain.",
     "Mix with cream and seasoning; serve chilled."
   ],
-  "notes": [
-    "Note: Drinking this before a feast helps with digestion."
-  ],
+  "notes": ["Note: Drinking this before a feast helps with digestion."],
   "default_servings": 4,
-  "original_snippets": [
-    "cold_cucumber_soup.jpg"
-  ]
+  "original_snippets": ["cold_cucumber_soup.jpg"]
 }

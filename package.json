@@ -1,0 +1,17 @@
+{
+  "name": "mridu_pati_recipes",
+  "version": "1.0.0",
+  "description": "A clean, categorized, and searchable recipe book featuring traditional and modern recipes.",
+  "scripts": {
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,css,html,json}": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.2"
+  }
+}

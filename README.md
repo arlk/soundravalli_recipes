@@ -3,6 +3,7 @@
 A clean, categorized, and searchable recipe book featuring traditional and modern recipes.
 
 ## Features
+
 - **Categorized View:** Recipes are grouped into logical categories like Rice and Tiffin, Sweets, and Pickles.
 - **Dynamic Search:** Find recipes by name (English/Tamil), category, or ingredients.
 - **Portion Adjustments:** Built-in servings calculator that automatically scales ingredient quantities.
@@ -30,6 +31,7 @@ Due to the use of JavaScript `fetch()` for loading recipe data, you **must** use
 5.  GitHub will build the site and provide you with a URL (usually `https://your-username.github.io/soundravalli_recipes/`).
 
 ## Project Structure
+
 - `index.html`: The main landing page and recipe list.
 - `recipe.html`: Template for displaying individual recipe details.
 - `style.css`: Modern, minimalist styling with Facebook Blue accents.

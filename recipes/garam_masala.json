@@ -9,12 +9,8 @@
     "Whole Black Pepper - 25g",
     "Cloves - 15g"
   ],
-  "method": [
-    "Lightly roast and grind in a mixer."
-  ],
+  "method": ["Lightly roast and grind in a mixer."],
   "notes": [],
   "default_servings": 0,
-  "original_snippets": [
-    "garam_masala.jpg"
-  ]
+  "original_snippets": ["garam_masala.jpg"]
 }

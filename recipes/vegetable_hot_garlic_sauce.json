@@ -24,11 +24,7 @@
     "Once the gravy thickens slightly, remove the pan from heat.",
     "For aroma, add chopped coriander leaves and curry leaves."
   ],
-  "notes": [
-    "Note: This goes very well with both chapathi and rice."
-  ],
+  "notes": ["Note: This goes very well with both chapathi and rice."],
   "default_servings": 4,
-  "original_snippets": [
-    "vegetable_hot_garlic_sauce.jpg"
-  ]
+  "original_snippets": ["vegetable_hot_garlic_sauce.jpg"]
 }
