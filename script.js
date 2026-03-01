@@ -225,12 +225,12 @@ document.addEventListener('DOMContentLoaded', () => {
         function scaleIngredients(servings) {
             let markdown = "";
             
-            if (recipe.notes && recipe.notes.length > 0) {
+            if (recipe.notes && Array.isArray(recipe.notes) && recipe.notes.length > 0) {
                 markdown += recipe.notes.map(note => `> ${note}`).join('\n\n') + "\n\n";
             }
 
             function renderIngredients(ingredientsList, header = "### Ingredients") {
-                if (!ingredientsList || ingredientsList.length === 0) return "";
+                if (!ingredientsList || !Array.isArray(ingredientsList) || ingredientsList.length === 0) return "";
                 let md = header + "\n\n";
                 md += ingredientsList.map(ingStr => {
                     const parsed = parseIngredient(ingStr);
@@ -245,23 +245,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function renderMethod(methodList, header = "### Method") {
-                if (!methodList || methodList.length === 0) return "";
+                if (!methodList || !Array.isArray(methodList) || methodList.length === 0) return "";
                 let md = header + "\n\n";
                 let stepCounter = 1;
-                const flattenedSteps = methodList.flatMap(step => step.split('\n'));
+                
+                const flattenedSteps = methodList.flatMap(step => typeof step === 'string' ? step.split('\n') : []);
+                
                 md += flattenedSteps.map((line) => {
                     const trimmedLine = line.trim();
-                    if (/^([-*]|\*\*)/.test(trimmedLine) || !trimmedLine) return line;
-                    return `${stepCounter++}. ${line}`;
-                }).join('\n\n') + "\n\n";
+                    if (!trimmedLine) return "";
+                    if (/^([-*]|\*\*)/.test(trimmedLine)) return trimmedLine;
+                    return `${stepCounter++}. ${trimmedLine}`;
+                }).filter(line => line !== "").join('\n\n') + "\n\n";
+                
                 return md;
             }
 
-            if (recipe.variations && recipe.variations.length > 0) {
+            if (recipe.variations && Array.isArray(recipe.variations) && recipe.variations.length > 0) {
                 recipe.variations.forEach(v => {
-                    markdown += `## ${v.title}\n\n`;
+                    if (v.title) markdown += `## ${v.title}\n\n`;
                     markdown += renderIngredients(v.ingredients);
                     markdown += renderMethod(v.method);
+                    markdown += "---\n\n"; // Divider between variations
                 });
             } else {
                 markdown += renderIngredients(recipe.ingredients);
