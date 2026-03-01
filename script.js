@@ -229,9 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 markdown += recipe.notes.map(note => `> ${note}`).join('\n\n') + "\n\n";
             }
 
-            if (recipe.ingredients && recipe.ingredients.length > 0) {
-                markdown += "### Ingredients\n\n";
-                markdown += recipe.ingredients.map(ingStr => {
+            function renderIngredients(ingredientsList, header = "### Ingredients") {
+                if (!ingredientsList || ingredientsList.length === 0) return "";
+                let md = header + "\n\n";
+                md += ingredientsList.map(ingStr => {
                     const parsed = parseIngredient(ingStr);
                     if (parsed.qty !== null && defaultServings > 0) {
                         const scaledQty = (parsed.qty / defaultServings) * servings;
@@ -240,41 +241,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return `- ${ingStr}`;
                 }).join('\n') + "\n\n";
+                return md;
             }
 
-            markdown += "### Method\n\n";
-            let stepCounter = 1;
-            
-            // Split methods by line to handle ingredients correctly within variations
-            const flattenedSteps = recipe.method.flatMap(step => step.split('\n'));
-            
-            markdown += flattenedSteps.map((line) => {
-                const trimmedLine = line.trim();
-                
-                // Keep headers as is
-                if (trimmedLine.startsWith('###')) {
-                    stepCounter = 1;
-                    return line;
-                }
-                
-                // Keep bolded text as is
-                if (trimmedLine.startsWith('**')) {
-                    return line;
-                }
-                
-                // If it's a bullet point, keep it as a bullet
-                if (trimmedLine.startsWith('-')) {
-                    return line;
-                }
-                
-                // If it's empty, keep it empty
-                if (!trimmedLine) {
-                    return line;
-                }
+            function renderMethod(methodList, header = "### Method") {
+                if (!methodList || methodList.length === 0) return "";
+                let md = header + "\n\n";
+                let stepCounter = 1;
+                const flattenedSteps = methodList.flatMap(step => step.split('\n'));
+                md += flattenedSteps.map((line) => {
+                    const trimmedLine = line.trim();
+                    if (/^([-*]|\*\*)/.test(trimmedLine) || !trimmedLine) return line;
+                    return `${stepCounter++}. ${line}`;
+                }).join('\n\n') + "\n\n";
+                return md;
+            }
 
-                // Otherwise, it's a numbered step
-                return `${stepCounter++}. ${line}`;
-            }).join('\n\n') + "\n";
+            if (recipe.variations && recipe.variations.length > 0) {
+                recipe.variations.forEach(v => {
+                    markdown += `## ${v.title}\n\n`;
+                    markdown += renderIngredients(v.ingredients);
+                    markdown += renderMethod(v.method);
+                });
+            } else {
+                markdown += renderIngredients(recipe.ingredients);
+                markdown += renderMethod(recipe.method);
+            }
 
             contentDiv.innerHTML = marked.parse(markdown);
 

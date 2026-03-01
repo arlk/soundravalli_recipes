@@ -3,29 +3,51 @@
   "title_en": "Coconut Burfi",
   "title_ta": "தேங்காய் பர்பி",
   "category": "Sweets and Desserts",
-  "method": [
-    "### Variation 1",
-    "**Ingredients:**\n- Grated Coconut - 3 cups",
-    "- Sugar - 2 1/2 cups",
-    "- Milk - 3/4 cup",
-    "- Color and Essence - a little",
-    "**Method:** Combine the grated coconut, sugar, and milk in a heavy-bottomed pan.",
-    "Cook on medium heat, stirring continuously.",
-    "When the mixture thickens and starts to leave the sides of the pan, add the color and essence.",
-    "Pour the mixture onto a greased plate and spread it evenly.",
-    "Let it cool for a few minutes and then cut into desired shapes.",
-    "### Variation 2",
-    "**Ingredients:**\n- Grated Coconut - 1 cup",
-    "- Sugar - 1 cup",
-    "- Cardamom powder - a pinch",
-    "- Ghee - 1 tbsp",
-    "**Method:** Stir grated coconut and sugar on low flame until they thicken.",
-    "Add cardamom and ghee, then pour onto a plate to cool and set.",
-    "### Variation 3 (Gram Flour Variation)",
-    "**Ingredients:**\n- Gram Flour (Besan) - 1 cup\n- Grated Coconut - 1 cup\n- Milk - 1 cup\n- Ghee or Dalda - 1 cup\n- Sugar - 2 cups",
-    "**Method:** Combine all ingredients in a heavy-bottomed pan.",
-    "Stir continuously over medium heat until the mixture thickens and leaves the sides of the pan.",
-    "Pour the mixture onto a greased plate, level it, and cut into pieces while still warm."
+  "variations": [
+    {
+      "title": "Variation 1",
+      "ingredients": [
+        "Grated Coconut - 3 cups",
+        "Sugar - 2 1/2 cups",
+        "Milk - 3/4 cup",
+        "Color and Essence - a little"
+      ],
+      "method": [
+        "Combine the grated coconut, sugar, and milk in a heavy-bottomed pan.",
+        "Cook on medium heat, stirring continuously.",
+        "When the mixture thickens and starts to leave the sides of the pan, add the color and essence.",
+        "Pour the mixture onto a greased plate and spread it evenly.",
+        "Let it cool for a few minutes and then cut into desired shapes."
+      ]
+    },
+    {
+      "title": "Variation 2",
+      "ingredients": [
+        "Grated Coconut - 1 cup",
+        "Sugar - 1 cup",
+        "Cardamom powder - a pinch",
+        "Ghee - 1 tbsp"
+      ],
+      "method": [
+        "Stir grated coconut and sugar on low flame until they thicken.",
+        "Add cardamom and ghee, then pour onto a plate to cool and set."
+      ]
+    },
+    {
+      "title": "Variation 3 (Gram Flour Variation)",
+      "ingredients": [
+        "Gram Flour (Besan) - 1 cup",
+        "Grated Coconut - 1 cup",
+        "Milk - 1 cup",
+        "Ghee or Dalda - 1 cup",
+        "Sugar - 2 cups"
+      ],
+      "method": [
+        "Combine all ingredients in a heavy-bottomed pan.",
+        "Stir continuously over medium heat until the mixture thickens and leaves the sides of the pan.",
+        "Pour the mixture onto a greased plate, level it, and cut into pieces while still warm."
+      ]
+    }
   ],
   "notes": [],
   "default_servings": 0,

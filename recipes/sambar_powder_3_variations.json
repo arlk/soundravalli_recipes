@@ -3,51 +3,68 @@
   "title_en": "Sambar Powder",
   "title_ta": "சாம்பார்பொடி",
   "category": "Powders and Masalas",
-  "ingredients": [],
-  "method": [
-    "### Variation 1",
-    "**Ingredients:**\n- Toor Dal - 500g",
-    "- Chana Dal - 500g",
-    "- Coriander seeds - 750g",
-    "- Dry Red Chilies - 250g",
-    "- Fenugreek - 25g (about 2 tbsp)",
-    "- Asafoetida - 50g",
-    "**Method:** Crush the solid asafoetida, fry it in oil, and keep it aside.",
-    "Place a pan on the stove and first roast the fenugreek until golden brown.",
-    "Then add chana dal and roast until golden brown.",
-    "Followed by toor dal and roast it.",
-    "Then add the red chilies, followed by coriander seeds (do not change this order).",
-    "Add the fried asafoetida to the roasted items in the pan, give it a quick mix, and remove from heat.",
-    "Grind this mixture to a rava (coarse) consistency in a mixer.",
-    "**Note:** This sambar powder will last for 20 days for a family of five.",
-    "### Variation 2",
-    "**Ingredients:**\n- Dry Red Chilies - 1 cup",
-    "- Coriander seeds - 3 tbsp",
-    "- Cumin - 1 tbsp",
-    "- Raw Rice - 1 tbsp",
-    "- Parboiled Rice - 1 tbsp",
-    "- Chana Dal - 1 tbsp",
-    "- Toor Dal - 1 tbsp",
-    "- Urad Dal - 1 tbsp",
-    "- Fenugreek - 1 tsp",
-    "- Mustard seeds - 2 tsp",
-    "- Turmeric sticks - 50 grams",
-    "**Method:** Sun-dry the dry red chilies and turmeric sticks.",
-    "Dry roast all the other ingredients individually.",
-    "Give it to a mill and grind it into a powder. Store it.",
-    "### Variation 3",
-    "**Ingredients:**\n- Dry Red Chilies - 1 cup",
-    "- Cumin - 1/2 tbsp",
-    "- Raw Rice - 1/2 tbsp",
-    "- Parboiled Rice - 1/2 tbsp",
-    "- Chana Dal - 1/2 tbsp",
-    "- Toor Dal - 1/2 tbsp",
-    "- Urad Dal - 1/2 tbsp",
-    "- Coriander seeds - 1/4 cup",
-    "- Mustard seeds - 1 tsp",
-    "- Fenugreek - 1 tsp",
-    "- Turmeric sticks - 5 pieces",
-    "**Method:** Sun-dry all the ingredients and grind them in a mill."
+  "variations": [
+    {
+      "title": "Variation 1",
+      "ingredients": [
+        "Toor Dal - 500g",
+        "Chana Dal - 500g",
+        "Coriander seeds - 750g",
+        "Dry Red Chilies - 250g",
+        "Fenugreek - 25g (about 2 tbsp)",
+        "Asafoetida - 50g"
+      ],
+      "method": [
+        "**Method:** Crush the solid asafoetida, fry it in oil, and keep it aside.",
+        "Place a pan on the stove and first roast the fenugreek until golden brown.",
+        "Then add chana dal and roast until golden brown.",
+        "Followed by toor dal and roast it.",
+        "Then add the red chilies, followed by coriander seeds (do not change this order).",
+        "Add the fried asafoetida to the roasted items in the pan, give it a quick mix, and remove from heat.",
+        "Grind this mixture to a rava (coarse) consistency in a mixer.",
+        "**Note:** This sambar powder will last for 20 days for a family of five."
+      ]
+    },
+    {
+      "title": "Variation 2",
+      "ingredients": [
+        "Dry Red Chilies - 1 cup",
+        "Coriander seeds - 3 tbsp",
+        "Cumin - 1 tbsp",
+        "Raw Rice - 1 tbsp",
+        "Parboiled Rice - 1 tbsp",
+        "Chana Dal - 1 tbsp",
+        "Toor Dal - 1 tbsp",
+        "Urad Dal - 1 tbsp",
+        "Fenugreek - 1 tsp",
+        "Mustard seeds - 2 tsp",
+        "Turmeric sticks - 50 grams"
+      ],
+      "method": [
+        "Sun-dry the dry red chilies and turmeric sticks.",
+        "Dry roast all the other ingredients individually.",
+        "Give it to a mill and grind it into a powder. Store it."
+      ]
+    },
+    {
+      "title": "Variation 3",
+      "ingredients": [
+        "Dry Red Chilies - 1 cup",
+        "Cumin - 1/2 tbsp",
+        "Raw Rice - 1/2 tbsp",
+        "Parboiled Rice - 1/2 tbsp",
+        "Chana Dal - 1/2 tbsp",
+        "Toor Dal - 1/2 tbsp",
+        "Urad Dal - 1/2 tbsp",
+        "Coriander seeds - 1/4 cup",
+        "Mustard seeds - 1 tsp",
+        "Fenugreek - 1 tsp",
+        "Turmeric sticks - 5 pieces"
+      ],
+      "method": [
+        "Sun-dry all the ingredients and grind them in a mill."
+      ]
+    }
   ],
   "notes": [],
   "default_servings": 0,
