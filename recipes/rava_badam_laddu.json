@@ -4,19 +4,24 @@
   "title_ta": "ரவ் பாதா சாக்",
   "category": "Sweets and Desserts",
   "ingredients": [
-    "Fine Rava - 1 cup",
+    "White Rava - 1 cup",
     "Sugar - 1 cup",
-    "Milk - 1/2 cup",
-    "Badam and Cashews",
+    "Milk - 4 cups",
+    "Badam (Almonds) - 10",
+    "Cashew nuts - 10",
     "Cardamom - 6",
     "Raisins - 10"
   ],
   "method": [
-    "Roast rava in ghee.",
-    "Add milk and sugar; stir on low flame until halwa consistency.",
-    "Form balls and decorate with cashews."
+    "Heat a little ghee in a pan and roast the rava until fragrant and lightly golden.",
+    "Add the milk and sugar to the roasted rava. Cook on low heat, stirring continuously, until the mixture thickens and reaches a halwa-like consistency.",
+    "Remove from heat. Thinly slice the roasted almonds and cashews.",
+    "While the mixture is still warm, form small balls (laddus).",
+    "Decorate each laddu with sliced badam, cashew, and a raisin. Add cardamom powder for flavor."
   ],
-  "notes": [],
+  "notes": [
+    "Note: The Tamil title in the original snippet is written as 'ரவ் பாதா சாக்', which is preserved here."
+  ],
   "default_servings": 0,
   "original_snippets": [
     "rava_badam_laddu.jpg"

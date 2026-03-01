@@ -6,24 +6,26 @@
   "ingredients": [
     "Well-ripened Tomatoes - 1 kg",
     "Tamarind - 250g",
-    "Salt - 1/8 cup",
+    "Garlic - 100 cloves",
     "Red Chili Powder - 1/8 cup",
-    "Mustard seeds - 10g",
-    "Fenugreek - 10g",
-    "Gingelly Oil - 0.25 liter"
+    "Salt - 1/8 cup",
+    "Gingelly Oil - 200g",
+    "Mustard seeds - 1 tsp",
+    "Curry Leaves - as required"
   ],
   "method": [
-    "Wash the tomatoes and wipe them with a dry cloth.",
-    "Chop the tomatoes into small pieces.",
-    "Clean the tamarind by removing seeds and fibers.",
-    "Dry roast the mustard seeds and fenugreek individually and powder them.",
-    "In a pan, add a little oil and sauté the chopped tomatoes and tamarind until the tomatoes turn mushy and the moisture evaporates.",
-    "Add the salt and red chili powder, and continue to sauté for a few more minutes.",
-    "Add the rest of the oil and the powdered mustard-fenugreek mixture.",
-    "Mix well and simmer until the oil starts to separate.",
-    "Allow it to cool and store in a clean, dry glass jar."
+    "Sauté the chopped tomatoes in a little oil, then add the cleaned, fiber-less tamarind and sauté together.",
+    "Once the sautéed mixture cools, grind it in a mixer to a smooth paste.",
+    "Peel the garlic cloves and keep them ready.",
+    "Heat the gingelly oil in a pan, temper with mustard seeds and curry leaves.",
+    "Add the peeled garlic and sauté until they turn translucent.",
+    "Add the ground tomato-tamarind paste to the pan and mix well.",
+    "Add the red chili powder and salt powder, and continue to sauté until the oil separates and the pickle thickens.",
+    "Allow it to cool completely and store in a clean, dry glass jar."
   ],
-  "notes": [],
+  "notes": [
+    "Note: Don't forget to add chili powder and salt as per the original snippet instructions."
+  ],
   "default_servings": 0,
   "original_snippets": [
     "tomato_pickle.jpg"

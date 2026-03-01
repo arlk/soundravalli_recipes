@@ -4,17 +4,24 @@
   "title_ta": "போளி",
   "category": "Sweets and Desserts",
   "ingredients": [
-    "Maida and Wheat Flour",
+    "**For the Outer Layer:**",
+    "Maida - 1 cup",
+    "Wheat Flour - 1 cup",
+    "Kesari Powder - a pinch",
+    "Salt - a pinch",
+    "Oil - 2 tbsp",
+    "**For the Chana Dal Stuffing (Poornam):**",
     "Chana Dal - 2 cups",
-    "Jaggery - 2 cups",
-    "Coconut - 1",
-    "Ghee"
+    "Powdered Jaggery - 2 cups",
+    "Coconut - 1 (grated)",
+    "Cardamom - 4",
+    "Ghee - 1 tsp"
   ],
   "method": [
-    "Knead soft dough with flours, oil, and kesari powder; soak for 1 hour.",
-    "For Filling: Roast and soak chana dal; grind with coconut and cardamom.",
-    "Cook with jaggery and ghee until thick.",
-    "Stuff filling into dough and cook like flatbreads."
+    "**Make Outer Layer:** Sieve maida and wheat flour. Add kesari powder, salt, and half the oil. Knead into a soft, elastic dough with a little water. Pour the remaining oil over the dough and let it soak for 1 hour. Before preparing the polis, knead it again until smooth.",
+    "**Make Stuffing:** Dry roast chana dal without oil until it turns slightly reddish. Soak it in hot water for 4 hours. Drain the water, then grind the soaked dal with grated coconut, cardamom, and a little water to a fine paste.",
+    "Add the jaggery powder and 1 tsp of ghee to this paste in a heavy-bottomed pan. Cook on low heat, stirring continuously, until the mixture thickens and reaches a ball-like consistency. Remove and let it cool.",
+    "**Assembly:** Take a small ball of the outer dough, flatten it, place a ball of the stuffing in the center, and fold the dough to seal it. Flatten into a thin circle using your fingers or a rolling pin on a greased surface. Cook on a hot tawa with a little ghee until golden spots appear on both sides."
   ],
   "notes": [],
   "default_servings": 0,
